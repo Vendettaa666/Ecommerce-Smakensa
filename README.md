@@ -91,4 +91,4 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE). Lihat file `LICENSE` un
 
 ## Kontak
 
-- **Tautan Proyek:** [https://github.com/Vendetta666/Ecommerce-Smakensa](https://github.com/Vendetta666/Ecommerce-Smakensa)
+- **Tautan Proyek:** https://github.com/Vendettaa666/Ecommerce-Smakensa

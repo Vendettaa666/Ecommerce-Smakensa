@@ -1,109 +1,94 @@
-E-Commerce App
-Selamat datang di repositori proyek website e-commerce! Proyek ini dibangun menggunakan Laravel 12 dan bertujuan untuk menyediakan platform belanja online yang modern dan fungsional.
+# Ecommerce-Smakensa
 
-<!-- Fitur Utama
-Manajemen Produk: Tambah, edit, hapus, dan lihat detail produk.
+**Ecommerce-Smakensa** is a modern and robust e-commerce platform built with **Laravel 12** and **MySQL**, providing a seamless shopping experience for users and an intuitive management system for administrators. The frontend is powered by **Bootstrap** for a clean, responsive design.
 
-Kategori Produk: Mengorganisir produk ke dalam kategori yang berbeda.
+## Fitur Unggulan
 
-Keranjang Belanja: Pengguna dapat menambah, menghapus, atau mengubah kuantitas produk di keranjang.
+- **Autentikasi Pengguna:** Sistem registrasi dan login yang aman.
+- **Katalog Produk:** Jelajahi berbagai produk dengan deskripsi dan gambar yang mendetail.
+- **Keranjang Belanja:** Tambahkan, hapus, dan kelola produk di keranjang belanja Anda.
+- **Checkout Aman:** Proses pembayaran yang lancar dan aman.
+- **Riwayat Pesanan:** Lihat pesanan sebelumnya dan lacak statusnya.
+- **Dashboard Admin:** Kelola produk, pesanan, dan pengguna dari dashboard yang mudah digunakan.
 
-Proses Checkout: Alur checkout yang sederhana dan aman.
+## Teknologi yang Digunakan
 
-Manajemen Pesanan: Halaman untuk melihat riwayat pesanan.
+- **Backend:**
+  - Laravel 12
+  - MySQL
+- **Frontend:**
+  - Bootstrap 5
+  - Blade Templates
+- **Lainnya:**
+  - PHP
+  - Composer
 
-Autentikasi Pengguna: Sistem login dan registrasi yang aman.
+## Instalasi
 
-Teknologi yang Digunakan -->
+Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah berikut.
 
-### Teknologi yang Digunakan
+### Prasyarat
 
-Backend: Laravel 12
+- Web server (seperti XAMPP, WAMP, atau Laragon)
+- PHP (versi 8.2 atau lebih tinggi)
+- Composer
+- MySQL
 
-Frontend:
+### Langkah-langkah
 
-Bootstrap 5 (untuk tampilan responsif)
+1.  **Clone repositori:**
+    ```bash
+    git clone https://github.com/Vendetta666/Ecommerce-Smakensa.git
+    cd Ecommerce-Smakensa
+    ```
+2.  **Instal dependensi Composer:**
+    ```bash
+    composer install
+    ```
+3.  **Salin file `.env`:**
+    ```bash
+    cp .env.example .env
+    ```
+4.  **Konfigurasi file `.env`:**
+    Buka file `.env` dan sesuaikan pengaturan database Anda:
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nama_database_anda
+    DB_USERNAME=user_database_anda
+    DB_PASSWORD=password_database_anda
+    ```
+5.  **Buat database baru** di MySQL dengan nama yang sesuai.
+6.  **Jalankan migrasi database:**
+    ```bash
+    php artisan migrate
+    ```
+7.  **Jalankan seeder** (opsional, untuk data dummy):
+    ```bash
+    php artisan db:seed
+    ```
+8.  **Jalankan server pengembangan Laravel:**
+    ```bash
+    php artisan serve
+    ```
 
-Vite (sebagai bundler frontend)
+Aplikasi sekarang dapat diakses di `http://127.0.0.1:8000`.
 
-Database: MySQL (atau sesuai konfigurasi Anda)
+## Penggunaan
 
-Dependency Manager: Composer (PHP) dan NPM (JavaScript)
+- **Jelajahi Produk:** Kunjungi halaman utama untuk melihat semua produk yang tersedia.
+- **Buat Akun:** Daftar untuk mulai menambahkan produk ke keranjang belanja.
+- **Akses Admin:** Login dengan akun admin untuk mengakses dashboard dan mengelola toko.
 
-Persyaratan Sistem
-Pastikan Anda telah menginstal software berikut di komputer Anda:
+## Kontribusi
 
-PHP 8.2 atau lebih tinggi
+Kami menerima kontribusi! Jika Anda memiliki saran atau menemukan bug, silakan buka *issue* atau buat *pull request*.
 
-Composer
+## Lisensi
 
-Node.js & NPM
+Proyek ini dilisensikan di bawah [MIT License](LICENSE). Lihat file `LICENSE` untuk detail lebih lanjut.
 
-MySql
+## Kontak
 
-Git
-
-Panduan Instalasi
-Ikuti langkah-langkah di bawah ini untuk menjalankan proyek di lingkungan lokal Anda.
-
-1. Kloning Repositori
-Buka terminal dan jalankan perintah berikut untuk mengkloning proyek:
-
-git clone https://github.com/Vendetta666/Ecommerce-Smakensa.git
-cd Ecommerce-Smakensa
-
-2. Instal Dependensi
-Instal dependensi PHP menggunakan Composer dan dependensi JavaScript menggunakan NPM:
-
-composer install
-npm install
-
-3. Konfigurasi Lingkungan (.env)
-Salin file .env.example ke .env dan konfigurasikan detail database Anda.
-
-cp .env.example .env
-
-Setelah itu, buka file .env dan sesuaikan variabel berikut:
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nama_database_anda
-DB_USERNAME=root
-DB_PASSWORD=
-
-4. Buat Kunci Aplikasi & Jalankan Migrasi
-Jalankan perintah untuk membuat kunci enkripsi aplikasi dan melakukan migrasi database.
-
-php artisan key:generate
-php artisan migrate
-
-5. Jalankan Server Lokal
-Jalankan server Laravel dan bundler Vite secara bersamaan.
-
-# Buka terminal baru dan jalankan server
-php artisan serve
-
-# Buka terminal lain dan jalankan Vite
-npm run dev
-
-Sekarang, Anda bisa mengakses aplikasi di http://127.0.0.1:8000.
-
-Kontribusi
-Kami menerima kontribusi dari siapa pun! Jika Anda ingin berkontribusi, silakan ikuti langkah-langkah berikut:
-
-Fork repositori ini.
-
-Buat branch baru (git checkout -b fitur-baru).
-
-Lakukan perubahan dan commit (git commit -m 'Menambahkan fitur baru').
-
-Push ke branch Anda (git push origin fitur-baru).
-
-Buka Pull Request baru.
-
-Lisensi
-Proyek ini dirilis di bawah lisensi MIT.
-
-Kontak
-Jika Anda memiliki pertanyaan, hubungi tim pengembang di email@example.com.
+- **Tautan Proyek:** https://github.com/Vendettaa666/Ecommerce-Smakensa
